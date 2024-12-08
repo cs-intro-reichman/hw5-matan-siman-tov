@@ -111,7 +111,10 @@ public class Scrabble {
 			if (input.equals(".")){
 			break;
 			}
-			if(isWordInDictionary(input)){
+			if (!MyString.subsetOf(input,hand.replace(" ", ""))) {
+				System.out.println("Word not in hand. Try again.");
+				}
+			else if(isWordInDictionary(input)){
 				int wordScore = wordScore(input);
 				score = score + wordScore;
 				hand = MyString.remove(hand, input);
