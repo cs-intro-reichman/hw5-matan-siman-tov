@@ -112,7 +112,7 @@ public class Scrabble {
 			break;
 			}
 			if (!MyString.subsetOf(input,hand.replace(" ", ""))) {
-				System.out.println("Word not in hand. Try again.");
+				System.out.println("Invalid word. Try again.");
 				}
 			else if(isWordInDictionary(input)){
 				int wordScore = wordScore(input);
