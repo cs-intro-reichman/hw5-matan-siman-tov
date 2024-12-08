@@ -85,7 +85,7 @@ public class Scrabble {
 	// into it, at random indexes, the letters 'a' and 'e'
 	// (these two vowels make it easier for the user to construct words)
 	public static String createHand() {
-		String str = MyString.randomStringOfLetters(HAND_SIZE);
+		String str = MyString.randomStringOfLetters(HAND_SIZE-2);
 		str = MyString.insertRandomly('a', str);
 		str = MyString.insertRandomly('e', str);
 		return str;
@@ -118,7 +118,7 @@ public class Scrabble {
 				System.out.println(input+ " earned " + wordScore + " points. Score: " +score+ " points");
 			}
 			else{
-				System.out.println("No such word in the dictionary. try again.");
+				System.out.println("Invalid word. Try again.");
 			}
 		}
 		if (hand.length() == 0) {
